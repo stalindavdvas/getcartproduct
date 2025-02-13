@@ -39,4 +39,4 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/getcartproduct:latest
           sudo docker stop getcartproduct || true
           sudo docker rm getcartproduct || true
-          sudo docker run -d --name getcountcart -p 8080:8080 ${{ secrets.DOCKER_HUB_USERNAME }}/getcartproduct:latest
+          sudo docker run -d --name getcartproduct -p 8080:8080 ${{ secrets.DOCKER_HUB_USERNAME }}/getcartproduct:latest
