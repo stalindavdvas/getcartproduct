@@ -23,9 +23,9 @@ func main() {
 
 	// Configurar CORS
 	corsHandler := cors.New(cors.Options{
-		AllowedOrigins: []string{"http://3.229.231.204:3000"}, // Permite solicitudes desde el frontend
-		AllowedMethods: []string{"GET"},                       // Métodos HTTP permitidos
-		AllowedHeaders: []string{"Content-Type"},              // Encabezados permitidos
+		AllowedOrigins: []string{"http://3.229.231.204:3000"},               // Permite solicitudes desde el frontend
+		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}, // Métodos HTTP permitidos
+		AllowedHeaders: []string{"Content-Type", "Authorization"},           // Encabezados permitidos
 	})
 
 	// Envolver el router con el middleware de CORS
